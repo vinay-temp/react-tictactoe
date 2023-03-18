@@ -1,0 +1,59 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 25px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid blue;
+}
+
+.cross {
+  position: relative;
+  width: 50px;
+  height: 75px;
+}
+
+.cross::before,
+.cross::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 12px;
+  background-color: red;
+  left: 50%;
+  margin-left: -6px;
+}
+
+.cross::before {
+  transform: rotate(45deg);
+}
+
+.cross::after {
+  transform: rotate(-45deg);
+}
